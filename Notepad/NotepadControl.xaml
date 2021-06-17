@@ -1,0 +1,25 @@
+﻿<UserControl
+    x:Class="Notepad.NotepadControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Notepad"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls" d:DesignHeight="388" d:DesignWidth="633">
+
+
+    <Grid>
+        <CommandBar DefaultLabelPosition="Right" IsSticky="True">
+            <CommandBar.Content>
+                <StackPanel>
+                    <TextBlock Name="Position">Row 1, Col 1</TextBlock>
+                    <TextBlock Name="Encoding">UTF-8 (CRLF)</TextBlock>
+                </StackPanel>
+            </CommandBar.Content>
+            <AppBarButton Label="New"></AppBarButton>
+        </CommandBar>
+        <TextBox AutomationProperties.Name="multi-line TextBox"
+                 TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True" SelectionHighlightColor="Green" Margin="1,40,1,1" />
+    </Grid>
+</UserControl>
